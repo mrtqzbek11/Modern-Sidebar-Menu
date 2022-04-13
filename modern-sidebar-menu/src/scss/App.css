@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: black;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.layout {
+  width: 100%;
+  min-height: 100vh;
+  background: #27272b;
+  -webkit-transition: .4s all;
+  transition: .4s all;
+}
+
+.click-layout {
+  -webkit-transform: scaleX(0.9) scaleY(0.95);
+          transform: scaleX(0.9) scaleY(0.95);
+  opacity: 0.4;
+}
+
+.static-nav {
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.link {
+  color: white;
+  cursor: pointer;
+  font-size: 23px;
+  text-decoration: underline;
+  position: relative;
+  z-index: 3;
+  -webkit-transition: .4s all;
+  transition: .4s all;
+}
+
+.link:hover {
+  color: #27272b;
+}
+
+.link-click-active-rotate {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  margin-top: 30px;
+}
+
+.link::after {
+  content: '';
+  width: 10px;
+  height: 20px;
+  background: #fad161;
+  position: absolute;
+  bottom: 5px;
+  z-index: -1;
+  left: 0;
+  -webkit-transition: .4s all;
+  transition: .4s all;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+.sidebar-arw {
+  width: 70px;
+  height: 700px;
+  border-radius: 10px;
+  background: #27272b;
+  position: absolute;
+  left: -145px;
+  z-index: 2;
+  top: 60px;
+  -webkit-transition: .4s all;
+  transition: .4s all;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.sidebar-active {
+  left: 13px;
+}
+
+.sidebar-list {
+  margin: 20px 0;
+}
+
+.sidebar-list li {
+  list-style: none;
+  height: 70px;
+}
+
+.sidebar-list a {
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  -webkit-transition: .4s all;
+  transition: .4s all;
+}
+
+.sidebar-list a:hover {
+  text-shadow: 0 0 11px white;
+}
+
+@media screen and (max-width: 768px) {
+  .click-layout {
+    -webkit-transform: scaleX(0.6) scaleY(0.6);
+            transform: scaleX(0.6) scaleY(0.6);
+    opacity: 0.3;
+  }
+}
+/*# sourceMappingURL=App.css.map */
